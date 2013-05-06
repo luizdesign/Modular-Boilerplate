@@ -1,0 +1,40 @@
+/*
+ * Title: Animations Mixins
+ *
+ * Description: mixins for animation CSS3 property
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Animation mixin with params to:
+ * @animationName -> Keyframe name
+ * @animationDuration -> Animation duration time
+ * @animationLoop -> Animation loop number
+ * @animationDirection -> Animation direction
+ */
+ .animation( @animationName, @animationDuration: 0.5, @animationLoop: infinite, @animationDirection: linear ){
+
+ 	-webkit-animation: @animationName @animationDuration @animationDirection @animationLoop;
+ 	-moz-animation: @animationName @animationDuration @animationDirection @animationLoop;
+ 	-ms-animation: @animationName @animationDuration @animationDirection @animationLoop;
+ 	-o-animation: @animationName @animationDuration @animationDirection @animationLoop;
+ 	animation: @animationName @animationDuration @animationDirection @animationLoop;
+
+ }
+
+/*
+ * Animation mixin equal to .animation mixin, added to animation-delay CSS3 property with params:
+ * Same .animation properties
+ * @animationDelay -> Delay time before the animation is executed
+ */
+.animationDelay( @animationName, @animationDuration: 0.5, @animationLoop: infinite, @animationDirection: linear, @animationDelay: 1 ){
+
+	.animation( @animationName @animationDuration @animationDirection @animationLoop );
+	-webkit-animation-delay: @animationDelay;
+	-moz-animation-delay: @animationDelay;
+	-ms-animation-delay: @animationDelay;
+	-o-animation-delay: @animationDelay;
+	animation-delay: @animationDelay;
+
+}

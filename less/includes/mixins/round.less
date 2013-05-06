@@ -1,0 +1,62 @@
+/*
+ * Title: Round mixins
+ *
+ * Description: mixins for border-radius CSS3 property
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Description: Apply the border-radius property for all sides;
+ */
+.round( @radius: 5px ){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+/*
+ * Description: Apply the border-radius property for only the left side;
+ */
+.leftRound( @topLeft: 5px, @bottomLeft: 5px ){
+	-webkit-border-radius: @topLeft 0 0 @bottomLeft;
+	-moz-border-radius: @topLeft 0 0 @bottomLeft;
+	-ms-border-radius: @topLeft 0 0 @bottomLeft;
+	-o-border-radius: @topLeft 0 0 @bottomLeft;
+	border-radius: @topLeft 0 0 @bottomLeft;
+}
+
+/*
+ * Description: Apply the border-radius property for only the right side;
+ */
+.rightRound( @topRight: 5px, @bottomRight: 5px ){
+	-webkit-border-radius: 0 @topRight 0 @bottomRight;
+	-moz-border-radius: 0 @topRight 0 @bottomRight;
+	-ms-border-radius: 0 @topRight 0 @bottomRight;
+	-o-border-radius: 0 @topRight 0 @bottomRight;
+	border-radius: 0 @topRight 0 @bottomRight;
+}
+
+/*
+ * Description: Apply the border-radius property for only the top side;
+ */
+.topRound( @topLeft: 5px, @topRight: 5px ){
+	-webkit-border-radius: @topLeft @topRight 0 0;
+	-moz-border-radius: @topLeft @topRight 0 0;
+	-ms-border-radius: @topLeft @topRight 0 0;
+	-o-border-radius: @topLeft @topRight 0 0;
+	border-radius: @topLeft @topRight 0 0;
+}
+
+/*
+ * Description: Apply the border-radius property for only the bottom side;
+ */
+.bottomRound( @bottomLeft: 5px, @bottomRight: 5px ){
+	-webkit-border-radius: 0 0 @bottomRight @bottomLeft;
+	-moz-border-radius: 0 0 @bottomRight @bottomLeft;
+	-ms-border-radius: 0 0 @bottomRight @bottomLeft;
+	-o-border-radius: 0 0 @bottomRight @bottomLeft;
+	border-radius: 0 0 @bottomRight @bottomLeft;
+}

@@ -1,0 +1,65 @@
+/*
+ * Title: Flex layout mixins
+ *
+ * Description: mixins for flex CSS3 properties
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/* 
+ * Display Flex CSS3 with browser prefix
+ */
+.displayFlex{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+/*
+ * Flex CSS3 property with param:
+ * @unit -> Number of flex units
+ */
+.boxFlex( @unit: 1 ){
+	-webkit-box-flex: @unit;
+	-moz-box-flex: @unit;
+	-webkit-flex: @unit;
+	-ms-flex: @unit;
+	flex: @unit;
+}
+
+/*
+ * Flex-align CSS3 property with param:
+ * @align: align flex elements
+ */
+.flexAlign( @align: start ){
+	-webkit-box-align: @align;
+	-moz-box-align: @align;
+	-webkit-flex-align: @align;
+	-ms-flex-align: @align;
+	flex-align: @align; }
+
+/*
+ * Flex-pack CSS3 property with param:
+ * @pack -> 
+ */
+.flexPack( @pack: start ){
+	-webkit-box-pack: @pack;
+	-moz-box-pack: @pack;
+	-webkit-flex-pack: @pack;
+	-ms-flex-pack: @pack;
+	flex-pack: @pack;
+}
+
+/*
+ * Order CSS3 property with param:
+ * @order -> ordenation of elements render
+ */
+.order( @order: 1 ){
+	-webkit-order: @order;
+	-moz-order: @order;
+	-ms-order: @order;
+	-o-order: @order;
+	order: @order;
+}

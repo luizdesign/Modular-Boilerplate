@@ -1,0 +1,29 @@
+/*
+ * Title: Shadows mixins
+ *
+ * Description: mixins for box-shadow CSS3 property
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Define Box Shadow prefixado seguindo os parametros @offSetX, @offSetY, @blur e @color. O padrão é @offSetX e @offSetY igual a 0, @blur igual a 5px e color igual #000;
+ */
+.boxShadow( @offSetX: 0, @offSetY: 0, @blur: 5px, @color:#000 ){
+	-webkit-box-shadow: @offSetX @offSetY @blur @color;
+	-moz-box-shadow: @offSetX @offSetY @blur @color;
+	-ms-box-shadow: @offSetX @offSetY @blur @color;
+	-o-box-shadow: @offSetX @offSetY @blur @color;
+	box-shadow: @offSetX @offSetY @blur @color;
+}
+
+/*
+ * Define Inner Shadow prefixado seguindo os mesmos parametros do Box Shadow;
+ */
+.innerShadow( @offSetX: 0, @offSetY: 0, @blur: 5px, @color:#000 ){
+	-webkit-box-shadow: inset @offSetX @offSetY @blur @color;
+	-moz-box-shadow: inset @offSetX @offSetY @blur @color;
+	-ms-box-shadow: inset @offSetX @offSetY @blur @color;
+	-o-box-shadow: inset @offSetX @offSetY @blur @color;
+	box-shadow: inset @offSetX @offSetY @blur @color;
+}

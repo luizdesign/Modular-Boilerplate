@@ -1,0 +1,17 @@
+/*
+ * Title: Opacity mixins
+ *
+ * Description: mixins for opacity CSS property
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Opacity property with fallback for Internet Exporer with param:
+ * @value -> opacity CSS value based in decimal number: 0 to 1
+ */
+.opacity( @value: 1 ){
+	@newValue: @value * 100;
+	opacity: @value;
+	filter: alpha(opacity=@newValue);
+}

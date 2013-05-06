@@ -1,0 +1,29 @@
+/*
+ * Title: Transforms mixins
+ * 
+ * Description: diferent mixins for transforms CSS3 properties
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Rotate
+ */
+.rotate( @deg: 0deg ){
+	-moz-transform: rotate( @deg );
+	-webkit-transform: rotate( @deg );
+	-ms-transform: rotate( @deg );
+	-o-transform: rotate( @deg );
+	transform: rotate( @deg );
+}
+
+/*
+ * Scale
+ */
+.scale( @value: 1 ){
+	-moz-transform: scale( @value );
+	-webkit-transform: scale( @value );
+	-ms-transform: scale( @value );
+	-o-transform: scale( @value );
+	transform: scale( @value );
+}

@@ -1,0 +1,29 @@
+/*
+ * Title: Transitions mixins
+ *
+ * Description: mixins for transition CSS3 property
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Transition for all properties
+ */
+.transition( @time: 1s, @type: ease-in ){
+	-moz-transition: all @time @type;
+	-webkit-transition: all @time @type;
+	-ms-transition: all @time @type;
+	-o-transition: all @time @type;
+	transition: all @time @type;
+}
+
+/*
+ * Transition for specific property
+ */
+.transitionProperty( @property: all, @time: 1s, @type: ease-in ){
+	-moz-transition: @property @time @type;
+	-webkit-transition: @property @time @type;
+	-ms-transition: @property @time @type;
+	-o-transition: @property @time @type;
+	transition: @property @time @type;
+}

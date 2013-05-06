@@ -1,0 +1,42 @@
+/*
+ * Title: Reset CSS Old Browsers
+ *
+ * Description: CSS styles for to clean default browser styles for old browsers
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * HTML5
+ */
+audio, canvas, video{
+	*display: inline; *zoom: 1;
+}
+
+/*
+ * Forms
+ */
+fieldset, legend, button, input, select, textarea{
+	*margin-left: -7px;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"]{
+	*overflow: visible;
+}
+input[type="checkbox"], input[type="radio"]{
+	*height: 13px; *width: 13px;
+}
+
+/*
+ * deprecated tags
+ */
+b{ font-weight:bold; }
+i{ font-style: italic; }
+u{ text-decoration: underline; }
+
+/*
+ * ClearFix
+ */
+.clearfix:after{ content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix{ display: inline-block; }
+* html .clearfix{ height: 1%; }
+.clearfix{ display: block; }

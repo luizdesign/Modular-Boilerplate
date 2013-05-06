@@ -1,0 +1,31 @@
+/*
+ * Title: Gradients mixins
+ *
+ * Description: mixins for gradient CSS3 property
+ * Author: Kota, Luiz
+ * Version: 1.0
+ */
+
+/*
+ * Description: Apply the linear gradient property with a default color (case the browser not supported the browser), and the two color of the gradient: the start and the stop color
+ */
+.gradient( @defaultColor: #F5F5F5, @startColor: #EEE, @stopColor: #FFF ){
+  	background: @defaultColor;
+ 	background: -webkit-gradient( linear, left bottom, left top, color-stop(0, @startColor), color-stop(1, @stopColor) );
+  	background: -ms-linear-gradient( bottom,  @startColor, @stopColor );
+  	background: -moz-linear-gradient( center bottom, @startColor 0%,  @stopColor 100% );
+  	background: -o-linear-gradient( @stopColor, @startColor );
+  	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @stopColor, @startColor ) );
+}
+
+/*
+ * Description: Apply the radial gradient property with a default color (case the browser not supported the browser), and the two color of the gradient: the start and the stop color
+ */
+.radialGradient( @defaultColor: #F5F5F5, @startColor: #EEE, @stopColor: #FFF ){
+  	background: @defaultColor;
+ 	background: -webkit-gradient( radial, left bottom, left top, color-stop(0, @startColor), color-stop(1, @stopColor) );
+  	background: -ms-radial-gradient( bottom,  @startColor, @stopColor );
+  	background: -moz-radial-gradient( center bottom, @startColor 0%,  @stopColor 100% );
+  	background: -o-radial-gradient( @stopColor, @startColor );
+  	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", @stopColor, @startColor ) );
+}
